@@ -1,0 +1,26 @@
+<h1>Login</h1>
+
+<form>
+    <div id="username">
+    <md-input-container>
+        <label>Username</label>
+        <input type="text" class="form-control" ng-model="login.username" required ng-minlength="4">
+        <span ng-show="!login.username">Please enter a valid username!</span>
+    </md-input-container>
+    </div>
+
+    <div id="password">
+    <md-input-container>
+        <label>Password</label>
+        <input type="password" class="form-control" ng-model="login.password" required>
+    </md-input-container>
+    </div>
+
+    <p style="color:red" ng-show="invalidCreds">Invalid credentials</p>
+
+    <div class="action-buttons">
+        <md-button ng-click="login()">
+            Login
+        </md-button>
+    </div>
+</form>
